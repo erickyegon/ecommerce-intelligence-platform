@@ -1,0 +1,171 @@
+{
+  "dashboard_id": "01f131fa580d10f9a5eef6ab87cf6e70",
+  "name": "Maven Fuzzy Factory Executive Dashboard",
+  "version": "2.0",
+  "created_date": "2026-04-06",
+  "last_updated": "2026-04-06",
+  "description": "Comprehensive 4-page executive analytics dashboard with dynamic filtering",
+  "pages": [
+    {
+      "id": "bd697ae5",
+      "name": "Executive Overview",
+      "widgets": 13,
+      "datasets": 6,
+      "description": "High-level business health snapshot with KPIs, revenue trends, and P&L"
+    },
+    {
+      "id": "funnel_marketing",
+      "name": "Funnel & Marketing",
+      "widgets": 10,
+      "datasets": 9,
+      "description": "Conversion funnel analysis and A/B test results"
+    },
+    {
+      "id": "products",
+      "name": "Products",
+      "widgets": 10,
+      "datasets": 9,
+      "description": "Product performance, cross-sell opportunities, refund monitoring"
+    },
+    {
+      "id": "customer_ml",
+      "name": "Customer & ML",
+      "widgets": 11,
+      "datasets": 9,
+      "description": "Customer lifetime value analysis and ML-powered predictions"
+    },
+    {
+      "id": "global_filters",
+      "name": "Global Filters",
+      "widgets": 5,
+      "filters": [
+        "filter_month",
+        "filter_channel",
+        "filter_device",
+        "filter_product",
+        "filter_customer_tier"
+      ]
+    }
+  ],
+  "total_widgets": 44,
+  "total_datasets": 33,
+  "global_filters": {
+    "filter_month": {
+      "column_bindings": [
+        "year_month",
+        "acquisition_cohort"
+      ],
+      "bound_datasets": [
+        "monthly_trends",
+        "product_monthly",
+        "refunds",
+        "cohort_retention"
+      ]
+    },
+    "filter_channel": {
+      "column_bindings": [
+        "marketing_channel"
+      ],
+      "bound_datasets": [
+        "monthly_trends",
+        "channel_cvr",
+        "top_sessions"
+      ]
+    },
+    "filter_device": {
+      "column_bindings": [
+        "device_type"
+      ],
+      "bound_datasets": [
+        "monthly_trends",
+        "channel_cvr",
+        "billing_test",
+        "funnel_unpivoted",
+        "top_sessions"
+      ]
+    },
+    "filter_product": {
+      "column_bindings": [
+        "primary_product_name"
+      ],
+      "bound_datasets": [
+        "product_monthly"
+      ]
+    },
+    "filter_customer_tier": {
+      "column_bindings": [
+        "customer_tier"
+      ],
+      "bound_datasets": [
+        "customer_seg_summary"
+      ]
+    }
+  },
+  "data_sources": [
+    "workspace.mff_gold.executive_kpis",
+    "workspace.mff_gold.monthly_channel_trends",
+    "workspace.mff_gold.sessions_enriched",
+    "workspace.mff_gold.orders_enriched",
+    "workspace.mff_gold.funnel_step_analysis",
+    "workspace.mff_gold.channel_conversion_rates",
+    "workspace.mff_gold.ab_lander_test_results",
+    "workspace.mff_gold.billing_ab_test_results",
+    "workspace.mff_gold.product_monthly_performance",
+    "workspace.mff_gold.cross_sell_matrix",
+    "workspace.mff_gold.refund_analysis",
+    "workspace.mff_gold.session_conversion_predictions",
+    "workspace.mff_gold.ltv_by_acquisition_channel",
+    "workspace.mff_gold.acquisition_cohorts",
+    "workspace.mff_gold.customer_segments"
+  ],
+  "design_system": {
+    "primary_color": "#1976D2",
+    "background_color": "#F5F5F5",
+    "layout": "modern_bi",
+    "spacing": {
+      "header_row": 0,
+      "kpi_strip_row": 3,
+      "main_analytics_row": 9,
+      "details_row": 24
+    }
+  },
+  "ml_models": {
+    "conversion_prediction": {
+      "type": "Logistic Regression",
+      "auc_roc": 0.847,
+      "features": [
+        "marketing_channel",
+        "device_type",
+        "time_features"
+      ],
+      "target": "converted_label"
+    },
+    "customer_segmentation": {
+      "type": "KMeans",
+      "k": 4,
+      "features": [
+        "recency",
+        "frequency",
+        "monetary"
+      ],
+      "segments": [
+        "VIP",
+        "Premium",
+        "Standard",
+        "At-Risk"
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/erickyegon/ecommerce-intelligence-platform",
+    "path": "dashboards/maven-fuzzy-factory/",
+    "branch": "main"
+  },
+  "notes": [
+    "All metrics are dynamic and respond to filter selections",
+    "No hard-coded insights or values",
+    "Data coverage: 2012-2015 (Maven Fuzzy Factory dataset)",
+    "Dashboard uses serverless SQL warehouse",
+    "Filters persist across page navigation"
+  ]
+}
