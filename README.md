@@ -365,14 +365,7 @@ Recommended certified datasets: `mff_semantic.v_marketing_performance`, `mff_sem
 
 ---
 
-## Author
-
-**Erick Kiprotich Yegon, PhD**
-Independent AI & Data Science Consultant · Richmond, KY
-
-[GitHub](https://github.com/erickyegon) · [LinkedIn](https://linkedin.com/in/erickyegon) · [ORCID](https://orcid.org/0000-0002-7055-4848)
-
-17+ years in data science, analytics engineering, and implementation science. Former Global Director of Data Science & Analytics at Living Goods — 25-person team, Kenya/Uganda/Burkina Faso, 8.5M+ individuals served. 30+ peer-reviewed publications (h-index 10). EB-1A Extraordinary Ability designation.
+Author: Erick Kiprotich Yegon, epidemiologist and data scientist (real-world evidence, HEOR, causal inference) · Portfolio: https://erickyegon.github.io · LinkedIn: https://linkedin.com/in/erickyegon
 
 ---
 
